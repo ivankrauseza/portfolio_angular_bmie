@@ -4,12 +4,12 @@ const commands = [
   {
     name: 'api',
     command: process.execPath,
-    args: ['--experimental-sqlite', '--watch', 'server/api.mjs']
+    args: ['--watch', 'server/api.mjs']
   },
   {
     name: 'angular',
     command: 'npx',
-    args: ['ng', 'serve', '--watch', '--live-reload', '--hmr']
+    args: ['ng', 'serve', '--host', '0.0.0.0', '--port', '4200', '--watch', '--live-reload', '--hmr']
   }
 ];
 
