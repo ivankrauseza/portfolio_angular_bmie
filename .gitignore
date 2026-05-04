@@ -6,6 +6,8 @@ dist/
 *.log
 Dockerfile
 docker-compose.yml
+db/*.sqlite
+db/*.sqlite-*
 
 # Compiled output
 /dist

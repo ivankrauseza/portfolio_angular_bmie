@@ -61,6 +61,10 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "options": {
+            "watch": true,
+            "liveReload": true,
+            "hmr": true,
+            "proxyConfig": "proxy.conf.json",
             "allowedHosts": [
               "angular.bridgemedia.ie"
             ]

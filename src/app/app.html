@@ -1,3 +1,128 @@
-<main class="home">
-  <h1>Hello World</h1>
-</main>
+<div class="min-h-dvh bg-[#f7f5f1] text-neutral-950">
+  <header class="sticky top-0 z-50 border-b border-neutral-200 bg-[#fbfaf7]">
+    <div class="border-b border-neutral-200">
+      <div class="mx-auto flex h-24 max-w-[1920px] items-center justify-between px-8 md:px-16 lg:px-24">
+        <a routerLink="/" class="flex items-center gap-2" (click)="closeMenu()" [attr.aria-label]="businessInfo.info().tradingName + ' home'">
+          <span class="text-xl font-black uppercase tracking-[-0.02em] text-neutral-950">{{ businessInfo.info().tradingName || businessInfo.info().name }}</span>
+          <span class="h-2 w-2 rounded-full bg-[#c90019]"></span>
+        </a>
+
+        <div class="hidden items-center gap-5 text-base font-semibold text-neutral-700 md:flex">
+          @if (auth.user()) {
+            <button class="hover:text-[#c90019]" type="button" (click)="logout()">Log Out</button>
+          } @else {
+            <a class="hover:text-[#c90019]" routerLink="/login">Sign in</a>
+          }
+        </div>
+
+        <button
+          class="inline-flex h-10 w-10 items-center justify-center border border-neutral-300 text-neutral-700 md:hidden"
+          type="button"
+          aria-label="Toggle navigation"
+          (click)="menuOpen.set(!menuOpen())"
+        >
+          <span class="text-xl leading-none">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mx-auto flex h-16 max-w-[1920px] items-center justify-between px-8 md:px-16 lg:px-24">
+      <div class="hidden items-center gap-9 text-base font-semibold text-neutral-700 md:flex">
+        <a routerLink="/" routerLinkActive="text-[#c90019]" [routerLinkActiveOptions]="{ exact: true }" class="hover:text-[#c90019]">The Exchange</a>
+        <a routerLink="/riverside-medical-centre" routerLinkActive="text-[#c90019]" class="hover:text-[#c90019]">Riverside Medical Centre</a>
+        <a routerLink="/workspace" routerLinkActive="text-[#c90019]" class="hover:text-[#c90019]">Workspace</a>
+        <a routerLink="/offices" routerLinkActive="text-[#c90019]" class="hover:text-[#c90019]">Office suites</a>
+        <a routerLink="/news-events" routerLinkActive="text-[#c90019]" class="hover:text-[#c90019]">News Events</a>
+        <a routerLink="/about" routerLinkActive="text-[#c90019]" class="hover:text-[#c90019]">About us</a>
+        <a routerLink="/find-us" routerLinkActive="text-[#c90019]" class="hover:text-[#c90019]">Find us</a>
+      </div>
+
+      @if (auth.user()) {
+        <a [routerLink]="auth.dashboardPath()" class="hidden bg-neutral-950 px-5 py-3 text-base font-semibold text-white transition hover:bg-[#c90019] md:inline-flex">Dashboard</a>
+      }
+    </nav>
+
+    @if (menuOpen()) {
+      <div class="border-t border-neutral-200 bg-[#fbfaf7] px-8 py-4 md:hidden">
+        <div class="grid gap-3">
+          <a routerLink="/" class="font-semibold text-neutral-800" (click)="closeMenu()">The Exchange</a>
+          <a routerLink="/riverside-medical-centre" class="font-semibold text-neutral-800" (click)="closeMenu()">Riverside Medical Centre</a>
+          <a routerLink="/workspace" class="font-semibold text-neutral-800" (click)="closeMenu()">Workspace</a>
+          <a routerLink="/offices" class="font-semibold text-neutral-800" (click)="closeMenu()">Office suites</a>
+          <a routerLink="/news-events" class="font-semibold text-neutral-800" (click)="closeMenu()">News Events</a>
+          <a routerLink="/about" class="font-semibold text-neutral-800" (click)="closeMenu()">About us</a>
+          <a routerLink="/find-us" class="font-semibold text-neutral-800" (click)="closeMenu()">Find us</a>
+          @if (auth.user()) {
+            <a [routerLink]="auth.dashboardPath()" class="font-semibold text-neutral-800" (click)="closeMenu()">Dashboard</a>
+            <button class="text-left font-semibold text-neutral-800" type="button" (click)="logout()">Log out</button>
+          } @else {
+            <a routerLink="/login" class="font-semibold text-[#c90019]" (click)="closeMenu()">Sign in</a>
+          }
+        </div>
+      </div>
+    }
+  </header>
+
+  <main class="min-h-[calc(100dvh-10rem)]">
+    <router-outlet />
+  </main>
+
+  <footer class="border-t border-neutral-200 bg-[#fbfaf7] text-neutral-950">
+    <div class="h-28 border-b border-neutral-200 bg-[repeating-linear-gradient(90deg,#d8d3ca_0,#d8d3ca_1px,transparent_1px,transparent_18px)]"></div>
+
+    <div class="mx-auto max-w-[1920px] px-8 py-12 md:px-16 lg:px-24">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-neutral-200 pb-8">
+        <h2 class="text-lg font-semibold">Contact us</h2>
+        <a class="text-sm font-semibold underline decoration-[#c90019] underline-offset-4" [href]="'tel:' + businessInfo.info().phoneNo">{{ businessInfo.info().phoneNo }}</a>
+      </div>
+
+      <div class="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <section class="lg:col-start-1">
+          <h2 class="text-xs font-semibold uppercase text-neutral-500">The property</h2>
+          <nav class="mt-5 grid gap-3 text-sm text-neutral-700">
+            <a class="hover:text-[#c90019]" routerLink="/">The Exchange</a>
+            <a class="hover:text-[#c90019]" routerLink="/riverside-medical-centre">Riverside Medical Centre</a>
+            <a class="hover:text-[#c90019]" routerLink="/workspace">Workspace</a>
+            <a class="hover:text-[#c90019]" routerLink="/offices">Office suites</a>
+            <a class="hover:text-[#c90019]" routerLink="/about">Parking</a>
+          </nav>
+        </section>
+
+        <section class="lg:col-start-2">
+          <h2 class="text-xs font-semibold uppercase text-neutral-500">Information</h2>
+          <nav class="mt-5 grid gap-3 text-sm text-neutral-700">
+            <a class="hover:text-[#c90019]" routerLink="/news-events">News and events</a>
+            <a class="hover:text-[#c90019]" routerLink="/about">About us</a>
+            <a class="hover:text-[#c90019]" routerLink="/find-us">Find us</a>
+          </nav>
+        </section>
+
+        <section class="lg:col-start-4">
+          <h2 class="text-xs font-semibold uppercase text-neutral-500">Company</h2>
+          <address class="mt-5 not-italic text-sm leading-7 text-neutral-700">
+            <p>{{ businessInfo.info().tradingName || businessInfo.info().name }}</p>
+            @for (line of businessInfo.addressLines(); track line) {
+              <p>{{ line }}</p>
+            }
+            <p class="mt-4">
+              <a class="hover:text-[#c90019]" [href]="'mailto:' + businessInfo.info().email">{{ businessInfo.info().email }}</a>
+            </p>
+            <p>
+              <a class="hover:text-[#c90019]" [href]="businessInfo.info().homePage" target="_blank" rel="noreferrer">{{ businessInfo.info().homePage }}</a>
+            </p>
+          </address>
+        </section>
+      </div>
+
+      <div class="mt-14 pt-7">
+        <nav class="flex flex-wrap justify-between gap-x-3 gap-y-2 text-xs text-neutral-500">
+          <span>© {{ businessInfo.info().tradingName || businessInfo.info().name }}</span>
+          <span class="flex gap-5">
+            <a class="hover:text-[#c90019]" routerLink="/privacy-policy">Privacy policy</a>
+            <a class="hover:text-[#c90019]" routerLink="/imprint">Imprint</a>
+          </span>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</div>
