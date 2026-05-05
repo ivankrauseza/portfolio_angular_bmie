@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AboutHistoryPage, AboutPage, AboutTeamPage, AdminDashboardPage, FindUsPage, HomePage, ImprintPage, JobsPage, LoginPage, MedicareCentrePage, MemberPage, NewsEventsPage, OfficeDetailPage, OfficesPage, PrivacyPolicyPage, StaffDashboardPage, WorkspacePage } from './pages';
+import { AboutHistoryPage, AboutPage, AboutTeamPage, AdminDashboardPage, FindUsPage, HomePage, ImprintPage, JobsPage, LoginPage, MedicareCentrePage, MemberPage, NewsEventsPage, OfficeDetailPage, OfficesPage, ParkingPage, PrivacyPolicyPage, StaffDashboardPage, WorkspacePage } from './pages';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: 'medicare-centre', redirectTo: 'riverside-medical-centre', pathMatch: 'full' },
   { path: 'offices', component: OfficesPage },
   { path: 'offices/:id', component: OfficeDetailPage },
+  { path: 'parking', component: ParkingPage },
   { path: 'find-us', component: FindUsPage },
   { path: 'imprint', component: ImprintPage },
   { path: 'privacy-policy', component: PrivacyPolicyPage },

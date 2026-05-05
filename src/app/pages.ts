@@ -246,7 +246,7 @@ export class AboutNavComponent {
       <app-about-nav />
 
       <div class="h-[34vh] min-h-72 overflow-hidden md:h-[42vh]">
-        <img src="/home-background.webp" alt="The Exchange exterior" class="h-full w-full object-cover object-center">
+        <img src="/williams.webp" alt="Williams Formula 1 car" class="h-full w-full object-cover object-center">
       </div>
 
       <div class="border-y border-neutral-200">
@@ -370,7 +370,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Secure basement parking serving shoppers, medical visitors, hot desk members and office tenants.',
     unit: 'B1',
     accent: 'bg-neutral-900',
-    image: '/home-background.webp',
+    image: '/tenants/basement-parking-interior.png',
     path: '/'
   },
   {
@@ -382,7 +382,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'All-day restaurant with evening service, client lunches and direct street access.',
     unit: 'G.01',
     accent: 'bg-[#8f1f2f]',
-    image: '/home-background.webp',
+    image: '/tenants/ember-table-interior.png',
     path: '/offices/ember-table-exch-g-01'
   },
   {
@@ -394,7 +394,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Neighbourhood cafe for commuters, office tenants and the co-working community.',
     unit: 'G.02',
     accent: 'bg-[#a96732]',
-    image: '/home-background.webp',
+    image: '/tenants/exchange-coffee-interior.png',
     path: '/offices/exchange-coffee-exch-g-02'
   },
   {
@@ -406,7 +406,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Convenience-led supermarket carrying daily groceries, fresh food and workplace essentials.',
     unit: 'G.03',
     accent: 'bg-[#52663b]',
-    image: '/home-background.webp',
+    image: '/tenants/market-hall-grocer-interior.png',
     path: '/offices/market-hall-grocer-exch-g-03'
   },
   {
@@ -418,7 +418,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Community pharmacy supporting medical visitors, residents and building occupiers.',
     unit: 'G.04',
     accent: 'bg-[#006c67]',
-    image: '/home-background.webp',
+    image: '/tenants/exchange-pharmacy-interior.png',
     path: '/offices/exchange-pharmacy-exch-g-04'
   },
   {
@@ -430,7 +430,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Performance footwear, training apparel and equipment for active city living.',
     unit: 'G.05',
     accent: 'bg-[#273f73]',
-    image: '/home-background.webp',
+    image: '/tenants/stride-sporting-goods-interior.png',
     path: '/offices/stride-sporting-goods-exch-g-05'
   },
   {
@@ -466,7 +466,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Private suite for web products, client workshops and hybrid product teams.',
     unit: '3.01',
     accent: 'bg-[#5a3f90]',
-    image: '/home-background.webp',
+    image: '/tenants/north-star-digital-interior.png',
     path: '/offices/north-star-digital-exch-3-01'
   },
   {
@@ -478,7 +478,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Campaign, content and brand experience studio with a compact project room.',
     unit: '3.02',
     accent: 'bg-[#975f28]',
-    image: '/home-background.webp',
+    image: '/tenants/bricolage-works-interior.png',
     path: '/offices/bricolage-exch-3-02'
   },
   {
@@ -490,7 +490,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Research-led software office for analytics, data tooling and client demos.',
     unit: '3.03',
     accent: 'bg-[#445a77]',
-    image: '/home-background.webp',
+    image: '/tenants/quantum-labs-interior.png',
     path: '/offices/quantum-exch-3-03'
   },
   {
@@ -502,7 +502,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Strategic communications office for public affairs, digital storytelling and campaigns.',
     unit: '3.04',
     accent: 'bg-[#6f5142]',
-    image: '/home-background.webp',
+    image: '/tenants/scribble-stone-interior.png',
     path: '/offices/scribble-and-stone-exch-3-04'
   },
   {
@@ -514,7 +514,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Event planning studio for guest experience, production logistics and launches.',
     unit: '3.05',
     accent: 'bg-[#b1851f]',
-    image: '/home-background.webp',
+    image: '/tenants/bee-events-interior.png',
     path: '/offices/bee-exch-3-05'
   },
   {
@@ -526,7 +526,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Consultancy suite supporting SMEs with systems, process and operational change.',
     unit: '3.06',
     accent: 'bg-[#475547]',
-    image: '/home-background.webp',
+    image: '/tenants/odin-consultants-interior.png',
     path: '/offices/odin-consultants-exch-3-06'
   },
   {
@@ -538,7 +538,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Design partner for startups, cultural organisations and community platforms.',
     unit: '4.01',
     accent: 'bg-[#2f655d]',
-    image: '/home-background.webp',
+    image: '/tenants/akara-studio-interior.png',
     path: '/offices/akara-exch-4-01'
   },
   {
@@ -550,7 +550,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Programming and audience development office for Irish venues and festivals.',
     unit: '4.02',
     accent: 'bg-[#6f3f52]',
-    image: '/home-background.webp',
+    image: '/tenants/field-arts-interior.png',
     path: '/offices/field-arts-exch-4-02'
   },
   {
@@ -562,7 +562,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Clinical innovation and device research suite with quiet focus rooms.',
     unit: '4.03',
     accent: 'bg-[#1f6b85]',
-    image: '/home-background.webp',
+    image: '/tenants/neuromod-devices-interior.png',
     path: '/offices/neuromod-devices-exch-4-03'
   },
   {
@@ -574,7 +574,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Architecture, interiors and workplace strategy team focused on adaptive reuse.',
     unit: '4.04',
     accent: 'bg-[#7b5941]',
-    image: '/home-background.webp',
+    image: '/tenants/context-studio-interior.png',
     path: '/offices/context-studio-exch-4-04'
   },
   {
@@ -586,7 +586,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Energy planning office helping organisations plan practical building improvements.',
     unit: '4.05',
     accent: 'bg-[#546d2f]',
-    image: '/home-background.webp',
+    image: '/tenants/codema-energy-interior.png',
     path: '/offices/codema-exch-4-05'
   },
   {
@@ -598,7 +598,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Digital operations team building workflow tools for distributed companies.',
     unit: '4.06',
     accent: 'bg-[#315c72]',
-    image: '/home-background.webp',
+    image: '/tenants/alga-operations-interior.png',
     path: '/offices/alga-exch-4-06'
   },
   {
@@ -610,7 +610,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Media production suite for character-led stories, storyboarding and production teams.',
     unit: '5.01',
     accent: 'bg-[#60436d]',
-    image: '/home-background.webp',
+    image: '/tenants/kavaleer-media-interior.png',
     path: '/offices/kavaleer-exch-5-01'
   },
   {
@@ -622,7 +622,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Professional services office for commercial agreements, property and employment advice.',
     unit: '5.02',
     accent: 'bg-[#374151]',
-    image: '/home-background.webp',
+    image: '/tenants/harbour-legal-interior.png',
     path: '/offices/office-suite-5-02-exch-5-02'
   },
   {
@@ -634,7 +634,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Advisory suite for owner-managed businesses, lending and financial planning.',
     unit: '5.03',
     accent: 'bg-[#8b5d28]',
-    image: '/home-background.webp',
+    image: '/tenants/copperline-finance-interior.png',
     path: '/offices/office-suite-5-03-exch-5-03'
   },
   {
@@ -646,7 +646,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Recruitment office supporting office, retail, medical and hospitality employers.',
     unit: '5.04',
     accent: 'bg-[#734343]',
-    image: '/home-background.webp',
+    image: '/tenants/atlas-recruitment-interior.png',
     path: '/offices/office-suite-5-04-exch-5-04'
   },
   {
@@ -658,7 +658,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'HR consultancy suite for policy, culture, compliance and leadership support.',
     unit: '5.05',
     accent: 'bg-[#4f5f3b]',
-    image: '/home-background.webp',
+    image: '/tenants/mosaic-hr-interior.png',
     path: '/offices/office-suite-5-05-exch-5-05'
   },
   {
@@ -670,7 +670,7 @@ const exchangeSpaces: ExchangeSpace[] = [
     summary: 'Management advisory office for transformation programmes and board support.',
     unit: '5.06',
     accent: 'bg-[#264b68]',
-    image: '/home-background.webp',
+    image: '/tenants/bluebridge-advisory-interior.png',
     path: '/offices/office-suite-5-06-exch-5-06'
   }
 ];
@@ -726,7 +726,7 @@ const exchangeSpaces: ExchangeSpace[] = [
             </div>
           </div>
 
-          <div class="min-h-80 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,.68)_100%),url('/home-background.webp')] bg-cover bg-center">
+            <div class="min-h-80 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,.68)_100%),url('/home-background.webp')] bg-cover bg-center text-white">
             <div class="flex h-full min-h-80 items-end p-6">
               <div>
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Directory</p>
@@ -756,7 +756,7 @@ const exchangeSpaces: ExchangeSpace[] = [
           <p>Basement, ground floor and five upper levels</p>
         </div>
 
-        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div class="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
           @for (space of filteredSpaces(); track space.id; let index = $index) {
             <a
               [routerLink]="space.path"
@@ -770,9 +770,9 @@ const exchangeSpaces: ExchangeSpace[] = [
                   <span class="px-2 py-1 text-xs font-semibold text-white" [ngClass]="space.accent">{{ space.unit }}</span>
                   <span class="bg-white/90 px-2 py-1 text-xs font-semibold text-neutral-950">{{ space.category }}</span>
                 </div>
-                <div class="absolute bottom-4 left-4 right-4">
+                <div class="absolute bottom-4 left-4 right-4 text-white">
                   <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/65">{{ space.floor }}</p>
-                  <h2 class="mt-2 text-xl font-semibold leading-tight">{{ space.name }}</h2>
+                  <h2 class="mt-2 text-xl font-semibold leading-tight text-white">{{ space.name }}</h2>
                 </div>
               </div>
 
@@ -1021,7 +1021,7 @@ export class OfficesPage {
 
 @Component({
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   template: `
     <section class="min-h-[calc(100dvh-10rem)] bg-[#fbfaf7]">
       <div class="mx-auto max-w-[1920px] px-8 py-10 md:px-16 lg:px-24">
@@ -1055,7 +1055,7 @@ export class OfficesPage {
               </div>
             </div>
 
-            <div class="min-h-[30rem] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,.42)_100%),url('/riverside-medical-centre.png')] bg-cover bg-center">
+            <div class="min-h-[30rem] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,.42)_100%),url('/riverside-medical-centre.png')] bg-cover bg-center text-white">
               <div class="flex h-full min-h-[30rem] items-end p-6">
                 <div>
                   <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">The Exchange</p>
@@ -1445,6 +1445,69 @@ export class OfficeDetailPage {
 
 @Component({
   standalone: true,
+  imports: [RouterLink],
+  template: `
+    <section class="min-h-[calc(100dvh-10rem)] bg-[#fbfaf7] text-neutral-950">
+      <div class="border-b border-neutral-200">
+        <div class="mx-auto grid max-w-[1920px] gap-10 px-8 py-12 md:px-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-24">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-[#c90019]">Basement level</p>
+            <h1 class="mt-3 text-5xl font-semibold leading-tight text-neutral-950">Free parking at The Exchange</h1>
+            <p class="mt-5 max-w-xl text-lg leading-8 text-neutral-700">The Exchange includes a free basement parking area with straightforward access back to the ground-floor mall and building entrances.</p>
+          </div>
+
+          <div class="relative min-h-80 overflow-hidden text-white">
+            <img src="/tenants/basement-parking-interior.png" alt="Basement parking area with lift lobby at The Exchange" class="absolute inset-0 h-full w-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/75"></div>
+            <div class="relative flex h-full min-h-80 items-end p-6">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Visitor access</p>
+                <p class="mt-2 max-w-md text-2xl font-semibold leading-tight">Park below the property, then continue by stairs, lift or ramp to ground level.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-[1280px] px-8 py-14 md:px-16 lg:px-24">
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="border border-neutral-200 bg-white p-6 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#c90019]">Price</p>
+            <h2 class="mt-3 text-2xl font-semibold">Free parking</h2>
+            <p class="mt-4 text-sm leading-7 text-neutral-700">Parking is available free of charge for visitors using The Exchange.</p>
+          </article>
+
+          <article class="border border-neutral-200 bg-white p-6 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#c90019]">Vertical access</p>
+            <h2 class="mt-3 text-2xl font-semibold">2 stairs and 2 elevators</h2>
+            <p class="mt-4 text-sm leading-7 text-neutral-700">Two stair cores and two elevators connect the parking area with the ground-floor mall level.</p>
+          </article>
+
+          <article class="border border-neutral-200 bg-white p-6 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#c90019]">Step-free route</p>
+            <h2 class="mt-3 text-2xl font-semibold">Ramp to ground level</h2>
+            <p class="mt-4 text-sm leading-7 text-neutral-700">A ramp route is also available for direct access from the parking area to ground level.</p>
+          </article>
+        </div>
+
+        <div class="mt-12 grid gap-10 border-y border-neutral-200 py-12 lg:grid-cols-[20rem_1fr]">
+          <div>
+            <h2 class="text-2xl font-semibold">Using the parking area</h2>
+          </div>
+          <div class="max-w-3xl text-sm leading-7 text-neutral-700">
+            <p>The parking area sits at basement level and is intended to make visits to the shops, medical centre, workspace and office suites simpler. From the car park, visitors can reach ground level by either of the two stair routes, either of the two elevators, or the ramp access route.</p>
+            <p class="mt-5">Once at ground level, you can continue into the mall, reach reception points, or move onward to the upper floors through the building circulation routes.</p>
+            <a routerLink="/find-us" class="mt-8 inline-flex bg-neutral-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c90019]">Find The Exchange</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `
+})
+export class ParkingPage {}
+
+@Component({
+  standalone: true,
   imports: [FormsModule],
   template: `
     <section class="min-h-[calc(100dvh-10rem)] bg-[#fbfaf7] text-neutral-950">
@@ -1455,7 +1518,7 @@ export class OfficeDetailPage {
       </div>
 
       <div class="h-[34vh] min-h-72 overflow-hidden md:h-[42vh]">
-        <img src="/home-background.webp" alt="The Exchange exterior" class="h-full w-full object-cover object-center">
+        <img src="/williams.webp" alt="Williams Formula 1 car" class="h-full w-full object-cover object-center">
       </div>
 
       <div class="border-y border-neutral-200 bg-white">
@@ -1699,7 +1762,7 @@ export class PrivacyPolicyPage {
             </div>
           </div>
 
-          <div class="min-h-[30rem] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,.64)_100%),url('/workspace-open-plan.png')] bg-cover bg-center">
+          <div class="min-h-[30rem] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,.64)_100%),url('/workspace-open-plan.png')] bg-cover bg-center text-white">
             <div class="flex h-full min-h-[30rem] items-end p-6">
               <div>
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Open-plan workspace</p>

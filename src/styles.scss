@@ -1,11 +1,136 @@
 @use "tailwindcss";
 
+:root {
+  --site-bg: #fbfaf7;
+  --site-text: #171717;
+  --site-muted: #3f3f46;
+  --site-subtle: #52525b;
+  --site-accent: #b00016;
+  --site-accent-strong: #8f0012;
+  --site-focus: #005fcc;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: var(--site-bg);
+  color: var(--site-text);
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+.graceful-image {
+  opacity: 0;
+  filter: blur(18px);
+  transform: scale(1.015);
+  transition:
+    opacity 450ms ease,
+    filter 700ms ease,
+    transform 700ms ease;
+  will-change: opacity, filter, transform;
+}
+
+.graceful-image--loaded {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.graceful-image--instant {
+  transition: none;
+  will-change: auto;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--site-focus);
+  outline-offset: 3px;
+}
+
+.text-sm {
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
+}
+
+.text-xs,
+.text-\[11px\] {
+  font-size: 0.8125rem;
+  line-height: 1.2rem;
+}
+
+.font-light {
+  font-weight: 400;
+}
+
+.text-neutral-500,
+.text-slate-500 {
+  color: var(--site-subtle);
+}
+
+.text-neutral-600,
+.text-neutral-700,
+.text-slate-600,
+.text-slate-700 {
+  color: var(--site-muted);
+}
+
+.text-\[\#c90019\] {
+  color: var(--site-accent);
+}
+
+.hover\:text-\[\#c90019\]:hover,
+.hover\:text-\[\#c90019\]:focus-visible {
+  color: var(--site-accent-strong);
+}
+
+.decoration-\[\#c90019\] {
+  text-decoration-color: var(--site-accent);
+}
+
+.focus\:border-\[\#c90019\]:focus {
+  border-color: var(--site-accent);
+}
+
+.text-white\/65,
+.text-white\/70 {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.tenant-card .relative h1,
+.tenant-card .relative h2,
+.tenant-card .relative h3,
+.tenant-card .relative p {
+  color: #fff;
+}
+
+.tenant-card .relative .bg-white,
+.tenant-card .relative .bg-white\/90 {
+  color: var(--site-text);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .graceful-image {
+    transition: opacity 160ms ease;
+    filter: none;
+    transform: none;
   }
 }

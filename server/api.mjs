@@ -582,6 +582,49 @@ function seedManagedDublinOffices() {
   }
 }
 
+function seedTenantInteriorImages() {
+  const memberImages = [
+    ['Ember Table', '/tenants/ember-table-interior.png'],
+    ['Exchange Coffee', '/tenants/exchange-coffee-interior.png'],
+    ['Market Hall Grocer', '/tenants/market-hall-grocer-interior.png'],
+    ['Exchange Pharmacy', '/tenants/exchange-pharmacy-interior.png'],
+    ['Stride Sporting Goods', '/tenants/stride-sporting-goods-interior.png'],
+    ['Riverside Medical Centre', '/riverside-medical-centre.png'],
+    ['North Star Digital', '/tenants/north-star-digital-interior.png'],
+    ['Bricolage', '/tenants/bricolage-works-interior.png'],
+    ['Quantum', '/tenants/quantum-labs-interior.png'],
+    ['Scribble & Stone', '/tenants/scribble-stone-interior.png'],
+    ['Bee', '/tenants/bee-events-interior.png'],
+    ['Odin Consultants', '/tenants/odin-consultants-interior.png'],
+    ['Akara', '/tenants/akara-studio-interior.png'],
+    ['Field Arts', '/tenants/field-arts-interior.png'],
+    ['Neuromod Devices', '/tenants/neuromod-devices-interior.png'],
+    ['Context Studio', '/tenants/context-studio-interior.png'],
+    ['Codema', '/tenants/codema-energy-interior.png'],
+    ['Alga', '/tenants/alga-operations-interior.png'],
+    ['Kavaleer', '/tenants/kavaleer-media-interior.png']
+  ];
+  const officeImages = [
+    ['EXCH-B1-PARKING', '/tenants/basement-parking-interior.png'],
+    ['EXCH-2-00', '/workspace-open-plan.png'],
+    ['EXCH-5-02', '/tenants/harbour-legal-interior.png'],
+    ['EXCH-5-03', '/tenants/copperline-finance-interior.png'],
+    ['EXCH-5-04', '/tenants/atlas-recruitment-interior.png'],
+    ['EXCH-5-05', '/tenants/mosaic-hr-interior.png'],
+    ['EXCH-5-06', '/tenants/bluebridge-advisory-interior.png']
+  ];
+  const updateMember = db.prepare('UPDATE members SET cover_image_data_url = ? WHERE business_name = ?');
+  const updateOffice = db.prepare('UPDATE offices SET image_data_url = ? WHERE sku = ?');
+
+  for (const [businessName, imagePath] of memberImages) {
+    updateMember.run(imagePath, businessName);
+  }
+
+  for (const [sku, imagePath] of officeImages) {
+    updateOffice.run(imagePath, sku);
+  }
+}
+
 function upsertMemberProfile({ username, name, email, businessName, contactEmail, phone, website, summary, tradingHours = '', closedDays = '', coverImageDataUrl = '', logoDataUrl = '' }) {
   const userId = upsertUser({
     username,
@@ -668,6 +711,7 @@ function seed() {
     seedDirectoryProfiles();
     seedOfficeDetails(existingMember.id);
     seedManagedDublinOffices();
+    seedTenantInteriorImages();
     return;
   }
 
@@ -703,6 +747,7 @@ function seed() {
 
   seedOfficeDetails(memberId);
   seedManagedDublinOffices();
+  seedTenantInteriorImages();
 
   const roomIds = [
     { id: randomUUID(), name: 'Boardroom', type: 'meeting', capacity: 12, rate: 35 },
